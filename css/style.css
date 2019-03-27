@@ -30,9 +30,12 @@ body{
 
 }
 .head{
-	background: url(../img/head.jpg);
+	background: url(../img/kisspng-snake-logo-vipers-snake-head-cliparts-5a77294e1ba505.5283950315177587981132.png);
 	-webkit-background-size: cover;
 	background-size: cover;
+	background-position: center center ;
+	background-position: 0 0;
+	background-repeat: no-repeat;
 }
 .mouse{
 	background: url(../img/food.png);

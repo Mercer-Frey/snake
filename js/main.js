@@ -127,14 +127,12 @@ function move() {
 
 	if (snakeBody[0].classList.contains('snakeBody')) {
 		setTimeout(() => {
-			alert("huy");
+			alert(`Откушено ${score} голов ЧеГевара`);
 		}, 200);
 		clearInterval(interval);
-		snakeBody[0].style.background = 'url(scream.jpg) center no-repeat';
+		snakeBody[0].style.background = 'url(../scream.jpg) center no-repeat';
 		snakeBody[0].style.backgroundSize = 'cover';
 	}
-
-	console.log(snakeCoordinates);
 
 	snakeBody[0].classList.add('head');
 	for (let i = 0; i < snakeBody.length; i++) {
@@ -146,7 +144,6 @@ function move() {
 let interval = setInterval(move, 200);
 
 ///// кнопки
-
 window.addEventListener('keydown', function (e) {
 	if (steps == true){
 		if(e.keyCode == 37 && direction != 'right'){
@@ -155,12 +152,14 @@ window.addEventListener('keydown', function (e) {
 		} else if (e.keyCode == 38 && direction != 'down'){
 			steps = false;
 			direction = 'up';
+			// head.style.transform = 
 		} else if (e.keyCode == 39 && direction != 'left'){
 			steps = false;
 			direction = 'right';
 		} else if (e.keyCode == 40 && direction != 'up'){
 			steps = false;
 			direction = 'down';
+			// head.style.transform = 
 		}
 	}
 
